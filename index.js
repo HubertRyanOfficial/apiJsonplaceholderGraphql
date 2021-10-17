@@ -4,8 +4,8 @@ const { ApolloServerPluginDrainHttpServer } = require("apollo-server-core");
 const express = require("express");
 const http = require("http");
 
-const res = require("./res");
-const type = require("./schema");
+const res = require("./src/res");
+const type = require("./src/schema");
 
 async function startApolloServer(typeDefs, resolvers) {
   const app = express();
@@ -25,7 +25,7 @@ async function startApolloServer(typeDefs, resolvers) {
   });
 
   await new Promise((resolve) => httpServer.listen({ port: 4000 }, resolve));
-  console.log(`🚀 Server ready at http://localhost:4000${server.graphqlPath}`);
+  console.log(`🚀 Server ready at ${server.graphqlPath}`);
 }
 
 startApolloServer(type, res);

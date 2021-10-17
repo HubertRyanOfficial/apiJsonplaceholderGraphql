@@ -1,11 +1,12 @@
 {
   "name": "graphqlStudy2",
   "version": "1.0.0",
-  "main": "src/server.js",
+  "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon src/server.js",
-    "start": "node src/server.js"
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "web": "node index.js"
   },
   "dependencies": {
     "apollo-server": "^3.4.0",
